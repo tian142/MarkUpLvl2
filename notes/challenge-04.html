@@ -1,4 +1,3 @@
-
 <!-- 
 
   Tasks: 
@@ -64,218 +63,260 @@
   - Self Destruct (input checkbox, should be DISABLED by default since we haven't implemented this feature yet)
   
  -->
- <!doctype html>
- <html>
-   
-<body>
-<form action="/your/api" method="">
- 
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, placeholder, autocomplete, required -->
-    <label>Name</label>
-    <input>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, placeholder, autocomplete, required -->
-    <label>Email</label>
-    <input>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, placeholder -->
-    <label>Pet Count</label>
-    <input>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, placeholder -->
-    <label>Birthday</label>
-    <input>
-  </p>
-  
-  <p>
-    <!-- Set the name for the select make none the current selection -->
-    <label>Prefix</label>
-    <select>
-      <option>Mr</option>
-      <option>Mrs</option>
-      <option>Ms</option>
-      <option>Sir</option>
-      <option>Madam</option>
-      <option>Dr</option>
-      <option>None</option>
-    </select>
-  </p>
-  
-  <!-- Associate labels with form elements with for and id -->
-  <ul>
-    <li>
-      <!-- Associate the label and input -->
-      <!-- set: type, name, id, value -->
-      <label>
-        <input>
-        Admin</label>
-    </li>
-    <li>
-      <!-- Associate the label and input -->
-      <!-- set: type, name, id, value -->
-      <label>
-        <input>
-        Editor</label>
-    </li>
-    <li>
-      <!-- Associate the label and input -->
-      <!-- set: type, name, id, value -->
-      <label>
-        <input>
-        Contributor</label>
-    </li>
-  </ul>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, value -->
-    <label>
-      <input>
-      Public Bio</label>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, value -->
-    <label>
-      <input>
-      Color</label>
-  </p>
-  
-  <p>
-    <!-- Set the name for the textarea -->
-    <label>Message</label>
-    <textarea></textarea>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id -->
-    <label>Upload Image</label>
-    <input>
-  </p>
-  
-  <p>
-    <!-- Associate the label and input -->
-    <!-- set: type, name, id, value, disabled -->
-    <label>
-      <input>
-      Self Destruct</label>
-  </p>
-  
-  <p>
-    <!-- Type reset -->
-    <button>cancel</button>
-    <!-- Type submit -->
-    <button>Submit</button>
-  </p>
-  
-</form>
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/your/api" method="">
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, placeholder, autocomplete, required -->
+                <label for="name">Name</label>
+                <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    autocomplete="on"
+                    required
+                />
+            </p>
 
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, placeholder, autocomplete, required -->
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Your email"
+                    autocomplete="on"
+                    required
+                />
+            </p>
 
-<!-- Styles for this form -->
-<style>
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, placeholder -->
+                <label for="pet">Pet Count</label>
+                <input id="pet" name="petCount" type="number" placeholder="0" />
+            </p>
 
-  body, html {
-    height: 100%;
-  }
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, placeholder -->
+                <label for="birthday">Birthday</label>
+                <input
+                    id="birthday"
+                    name="birthday"
+                    type="date"
+                    placeholder=""
+                />
+            </p>
 
-  body {
-    font-family: Helvetica;
-    font-weight: 300;
-    color: #444;
-    background-color: #eee;
-  }
+            <p>
+                <!-- Set the name for the select make none the current selection -->
+                <label for="prefix">Prefix</label>
+                <select id="prefix" name="prefix">
+                    <option>None</option>
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Ms</option>
+                    <option>Sir</option>
+                    <option>Madam</option>
+                    <option>Dr</option>
+                </select>
+            </p>
 
-  input, select, textarea {
-    margin: 0em 0;
-  }
+            <!-- Associate labels with form elements with for and id -->
+            <ul>
+                <li>
+                    <!-- Associate the label and input -->
+                    <!-- set: type, name, id, value -->
+                    <label for="admin">
+                        <input
+                            id="admin"
+                            type="radio"
+                            name="role"
+                            value="admin"
+                        />
+                        Admin</label
+                    >
+                </li>
+                <li>
+                    <!-- Associate the label and input -->
+                    <!-- set: type, name, id, value -->
+                    <label for="editor">
+                        <input
+                            id="editor"
+                            type="radio"
+                            name="role"
+                            value="editor"
+                        />
+                        Editor</label
+                    >
+                </li>
+                <li>
+                    <!-- Associate the label and input -->
+                    <!-- set: type, name, id, value -->
+                    <label for="contributor">
+                        <input
+                            id="contributor"
+                            type="radio"
+                            name="role"
+                            value="contributor"
+                        />
+                        Contributor</label
+                    >
+                </li>
+            </ul>
 
-  form {
-    width: 600px;
-    margin: auto;
-    display: flex;
-    padding: 2em;
-    flex-direction: column;
-  }
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, value -->
+                <label for="public-bio">
+                    <input
+                        id="public-bio"
+                        type="checkbox"
+                        name="public"
+                        value="public"
+                    />
+                    Public Bio</label
+                >
+            </p>
 
-  input {
-    padding: 0.5em;
-    border: 3px solid #bbb;
-    border-radius: 0.5em;
-    font-size: 1em;
-    display: inline-block;
-  }
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, value -->
+                <label for="color">
+                    <input id="color" type="color" name="color" />
+                    Color</label
+                >
+            </p>
 
-  label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+            <p>
+                <!-- Set the name for the textarea -->
+                <label for="message">Message</label>
+                <textarea id="message" name="bio"></textarea>
+            </p>
 
-  form > p {
-    display: flex;
-    flex-direction: column;
-  }
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id -->
+                <label for="upload-image">Upload Image</label>
+                <input id="upload-image" type="file" name="image" />
+            </p>
 
-  ul {
-    padding: 0;
-    list-style: none;;
-  }
+            <p>
+                <!-- Associate the label and input -->
+                <!-- set: type, name, id, value, disabled -->
+                <label for="self-destruct">
+                    <input id="self-destruct" type="checkbox" disabled />
+                    Self Destruct</label
+                >
+            </p>
 
-  select {
-    font-size: 1em;
-  }
+            <p>
+                <!-- Type reset -->
+                <button type="reset">cancel</button>
+                <!-- Type submit -->
+                <button type="submit">Submit</button>
+            </p>
+        </form>
 
-  input[type=color], input[type=radio], input[type=checkbox] {
-    margin: 1em;
-  }
+        <!-- Styles for this form -->
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
 
-  textarea {
-    height: 4em;
-    font-size: 1em;
-    padding: 0.5em;
-    border: 3px solid #666;
-    border-radius: 0.5em;
-  }
+            body {
+                font-family: Helvetica;
+                font-weight: 300;
+                color: #444;
+                background-color: #eee;
+            }
 
-  button {
-    padding: 0.5em;
-    font-size: 1em;
-    border: none;
-    background-color:cornflowerblue;
-    color: white;
-    font-weight: bold;
-    margin: 1em;
-    border-radius: 0.5em;
-    flex: 0;
-    align-self: flex-end;
-  }
+            input,
+            select,
+            textarea {
+                margin: 0em 0;
+            }
 
-  button[type="reset"] {
-    background-color: transparent;
-    color: #666;
-  }
+            form {
+                width: 600px;
+                margin: auto;
+                display: flex;
+                padding: 2em;
+                flex-direction: column;
+            }
 
-  p:last-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+            input {
+                padding: 0.5em;
+                border: 3px solid #bbb;
+                border-radius: 0.5em;
+                font-size: 1em;
+                display: inline-block;
+            }
 
-</style>
+            label {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
 
+            form > p {
+                display: flex;
+                flex-direction: column;
+            }
 
-</body>
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            select {
+                font-size: 1em;
+            }
+
+            input[type='color'],
+            input[type='radio'],
+            input[type='checkbox'] {
+                margin: 1em;
+            }
+
+            textarea {
+                height: 4em;
+                font-size: 1em;
+                padding: 0.5em;
+                border: 3px solid #666;
+                border-radius: 0.5em;
+            }
+
+            button {
+                padding: 0.5em;
+                font-size: 1em;
+                border: none;
+                background-color: cornflowerblue;
+                color: white;
+                font-weight: bold;
+                margin: 1em;
+                border-radius: 0.5em;
+                flex: 0;
+                align-self: flex-end;
+            }
+
+            button[type='reset'] {
+                background-color: transparent;
+                color: #666;
+            }
+
+            p:last-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+        </style>
+    </body>
 </html>
